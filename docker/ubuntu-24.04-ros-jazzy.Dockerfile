@@ -18,12 +18,12 @@ RUN apt install software-properties-common -y && \
     rosdep init
 
 # Clone drivers and not distributed dependencies
-RUN mkdir -p sie-drivers/src && \
-    cd sie-drivers && \
-    vcs import src --input https://raw.githubusercontent.com/KCL-BMEIS/sie-drivers/refs/heads/main/repos.yaml
+RUN mkdir -p mock-or-drivers/src && \
+    cd mock-or-drivers && \
+    vcs import src --input https://raw.githubusercontent.com/KCL-BMEIS/mock-or-drivers/refs/heads/main/repos.yaml
 
 # Install distributed dependencies and compile drivers
-RUN cd sie-drivers && \
+RUN cd mock-or-drivers && \
     rosdep update && \
     rosdep install \
         --from-paths src \
