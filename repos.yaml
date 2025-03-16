@@ -1,0 +1,9 @@
+repositories:
+  aw-ue150-driver:
+    type: git
+    url: https://github.com/KCL-BMEIS/aw-ue150-driver.git
+    version: main
+  ros-gst-bridge:
+    type: git
+    url: https://github.com/BrettRD/ros-gst-bridge.git
+    version: 8b8f096
